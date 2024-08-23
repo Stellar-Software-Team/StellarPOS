@@ -1,0 +1,2 @@
+//filepaths
+// const reactSrcPath = '/'
