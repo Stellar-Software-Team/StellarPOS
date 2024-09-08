@@ -7,6 +7,13 @@ import Sales from './sales/Sales'
 import Inventory from './inventory/Inventory'
 import Employee from './employee/Employee'
 import Settings from './settings/Settings'
+import Apparence from './settings/Apparence'
+import General from './settings/General'
+import Reporting from './settings/Reporting'
+import SettingsInventory from './settings/SettingsInventory'
+import PaymentMethod from './settings/PaymentMethod'
+import Account from './settings/Account'
+import Taxes from './settings/Taxes'
 
 function App() {
   const bodyData = {
@@ -28,7 +35,15 @@ function App() {
                 <Route path="/Inventory" element={<Inventory />} />
                 <Route path="/Sales" element={<Sales />} />
                 <Route path="/Employee" element={<Employee />} />
-                <Route path="/Settings" element={<Settings />} />
+                <Route path="/Settings" element={<Settings />}>
+                  <Route index element={<General />} />
+                  <Route path="Apparence" element={<Apparence />} />
+                  <Route path="PaymentMethod" element={<PaymentMethod />} />
+                  <Route path="SettingsInventory" element={<SettingsInventory />} />
+                  <Route path="Reporting" element={<Reporting />} />
+                  <Route path="Taxes" element={<Taxes />} />
+                  <Route path="Account" element={<Account />} />
+                </Route>
 
                 {/* <Route path="/dashboard" element={<Dashboard />} /> */}
               </Routes>

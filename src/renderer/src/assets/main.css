@@ -6,8 +6,6 @@ body {
   @apply font-poppins;
 }
 
-
-
 .custom-scrollbar::-webkit-scrollbar {
   width: 12px;
   height: 10px;

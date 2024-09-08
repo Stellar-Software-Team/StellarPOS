@@ -76,6 +76,23 @@ function Inventory() {
         <div className="h-[100%] w-1/3 bg-white shadow-md rounded-3xl ">
           <section>
             <div className="m-4 h-full flex flex-col">
+              <div className="flex flex-row gap-2 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="h-10"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+                  />
+                </svg>
+                <span className="font-bold text-3xl">Inventory</span>
+              </div>
               <div className="flex flex-row gap-[17rem]">
                 <div className="flex flex-col">
                   <span className="text-2xl font-semibold">Lettuce</span>
@@ -166,7 +183,7 @@ function Inventory() {
                 </div>
               </div>
 
-              <div className="mt-8 flex justify-center">
+              <div className="mt-4 flex justify-center">
                 <span className="text-2xl font-bold">General Information of the product</span>
               </div>
               <div className="mt-6 flex flex-row">
@@ -181,8 +198,8 @@ function Inventory() {
                   <span className="text-lg text-gray-600">Food, Vegetable </span>
                 </div>
               </div>
-              <div className="mt-6 flex w-full">
-                <button className="bg-black p-4 w-full rounded-3xl">
+              <div className="mt-4 flex w-full">
+                <button className="bg-black h-14 p-4 w-full rounded-3xl">
                   <span className="text-lg text-white">View detail statistics</span>
                 </button>
               </div>
