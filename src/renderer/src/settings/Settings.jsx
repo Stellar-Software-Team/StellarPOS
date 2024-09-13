@@ -148,7 +148,7 @@ function Settings() {
               </svg>
               Taxes
             </Link>
-            <Link
+            {/* <Link
               to="Account"
               className="flex items-center gap-2 rounded-md px-3 py-2 text-lg  transition-colors hover:bg-muted hover:text-foreground"
             >
@@ -168,7 +168,7 @@ function Settings() {
               </svg>
 
               <span className="mt-1"> Account</span>
-            </Link>
+            </Link> */}
           </nav>
         </aside>
         <section className="flex-1 p-6 bg-gray-100">

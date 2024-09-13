@@ -24,7 +24,7 @@ function SettingsInventory() {
       </header>
       <section className="flex flex-col space-y-8 overflow-auto h-[54rem] custom-scrollbar">
         <div className="bg-white rounded-2xl shadow-md p-6">
-          <h1 className="font-bold text-xl">Inventory Configuration</h1>
+          <h1 className="font-bold text-xl">General inventory configuration</h1>
           <span className="text-gray-500">Update your inventory configuration</span>
 
           <div className="grid grid-cols-2 gap-6 mt-8">
@@ -111,12 +111,34 @@ function SettingsInventory() {
               </Card>
             </div>
 
-            <div className="grid gap-2 "></div>
+            <div className="grid gap-2 ">
+              <div>
+                <Checkbox
+                  defaultChecked
+                  label={
+                    <div>
+                      <Typography color="blue-gray" className="font-medium">
+                        Automatically generate barcode
+                      </Typography>
+                      <Typography variant="small" color="gray" className="font-normal">
+                        This option will allow the creation of bar-codes when a product is uploaded
+                      </Typography>
+                    </div>
+                  }
+                  containerProps={{
+                    className: '-mt-5'
+                  }}
+                />
+              </div>
+              <div></div>
+            </div>
           </div>
           <div className="flex justify-start mt-4">
             <Button size="sm">Save</Button>
           </div>
         </div>
+                    
+        
       </section>
     </div>
   )

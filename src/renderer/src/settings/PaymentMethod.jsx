@@ -36,7 +36,7 @@ function PaymentMethod() {
       </header>
       <section className="flex flex-col space-y-8 overflow-auto h-[54rem] custom-scrollbar">
         <div className="bg-white rounded-2xl shadow-md p-6">
-          <h1 className="font-bold text-xl">Payment Methods</h1>
+          <h1 className="font-bold text-xl">General payment methods</h1>
           <span className="text-gray-500">Update your Payment Method configuration</span>
 
           <div className="grid grid-cols-2 gap-6 mt-8">

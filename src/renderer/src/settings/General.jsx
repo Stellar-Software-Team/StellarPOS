@@ -1,5 +1,15 @@
 import React from 'react'
-import { Switch, Select, Option, Input, Textarea, Button } from '@material-tailwind/react'
+import {
+  Switch,
+  Select,
+  Option,
+  Input,
+  Textarea,
+  Checkbox,
+  Typography,
+  Button,
+  Card
+} from '@material-tailwind/react'
 function General() {
   return (
     <div>
@@ -19,7 +29,7 @@ function General() {
                 // value=""
                 // onChange=""
                 variant="static"
-                className="!border-black"
+                className="!border-black !text-xl"
               />
               {/* <input id="business-name" defaultValue="Acme Inc" className='border border-gray-400 rounded-md h-8' /> */}
             </div>
@@ -30,8 +40,8 @@ function General() {
                 // value=""
                 // onChange=""
                 variant="static"
-                className="!border-black"
-              />{' '}
+                className="!border-black !text-xl"
+              />
             </div>
             <div className="grid gap-2">
               <h1 className="font-bold text-lg">Business Phone</h1>
@@ -40,7 +50,7 @@ function General() {
                 // value=""
                 // onChange=""
                 variant="static"
-                className="!border-black"
+                className="!border-black !text-xl"
               />{' '}
             </div>
             <div className="grid gap-2">
@@ -50,7 +60,7 @@ function General() {
                 // value=""
                 // onChange=""
                 variant="static"
-                className="!border-black"
+                className="!border-black !text-xl"
               />{' '}
             </div>
             <div className="grid gap-2">
@@ -116,7 +126,7 @@ function General() {
             </div>
           </div>
           <div className="flex justify-start mt-4">
-            <Button size="sm">Save</Button>{' '}
+            <Button size="sm">Save</Button>
           </div>
         </div>
 
@@ -145,7 +155,7 @@ function General() {
                 // value=""
                 // onChange=""
                 variant="static"
-                className="!border-black"
+                className="!border-black !text-xl"
               />{' '}
             </div>
             <div className="grid gap-2">
@@ -179,6 +189,137 @@ function General() {
           </div>
           <div className="flex justify-start mt-4">
             <Button size="sm">Save</Button>{' '}
+          </div>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-md p-6">
+          <h1 className="font-bold text-xl">Login & Security</h1>
+          <span className="text-gray-500">Update Login Settings & Security</span>
+
+          <div className="grid grid-cols-2 gap-6 mt-8">
+
+            <div className="grid gap-2">
+             <div className='flex flex-col gap-2'>
+              <h1 className="font-bold text-lg">Account Email</h1>  
+              <Input
+                label=""
+                // value=""
+                // onChange=""
+                variant="static"
+                className="!border-black !text-xl"
+              />
+             </div>
+            </div>
+
+            <div className="grid gap-2">
+            <div className='flex flex-col gap-2 items-center '>
+              {/* <h1 className="font-bold text-lg">Reset Password</h1> */}
+              <Checkbox
+                defaultChecked
+                label={
+                  <div>
+                    <Typography color="blue-gray" className="font-medium">
+                      Add 2-Factor Authentication
+                    </Typography>
+                    <Typography variant="small" color="gray" className="font-normal">
+                      Additional security for your account using your phone
+                    </Typography>
+                  </div>
+                }
+                containerProps={{
+                  className: '-mt-5'
+                }}
+              />
+             </div>
+            </div>
+
+            <div className="grid gap-2">
+            <h1 className="font-bold text-lg">Security 4-Digits Pin for Admin Actions</h1>
+            <Checkbox
+                defaultChecked
+                label={
+                  <div>
+                    <Typography color="blue-gray" className="font-medium">
+                      Add 2-Factor Authentication
+                    </Typography>
+                    <Typography variant="small" color="gray" className="font-normal">
+                      Additional security for your account using your phone number
+                    </Typography>
+                  </div>
+                }
+                containerProps={{
+                  className: '-mt-5'
+                }}
+              />    
+            
+            </div>
+
+            <div className="grid gap-2 ">
+            
+            </div>
+          </div>
+          <div className="flex justify-start mt-4">
+            <Button size="sm">Save</Button>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-md p-6">
+          <h1 className="font-bold text-xl">Recovery</h1>
+          <span className="text-gray-500">Recover or reset your passwords</span>
+
+          <div className="grid grid-cols-2 gap-6 mt-8">
+
+            <div className="grid gap-2">
+            <h1 className="font-bold text-lg">New Password</h1>
+
+            <Input
+                label=""
+                // value=""
+                // onChange=""
+                variant="static"
+                className="!border-black !text-xl"
+              />
+            </div>
+
+            <div className="grid gap-2">
+               <h1 className="font-bold text-lg">Confirm New Password</h1>
+              <Input
+                label=""
+                // value=""
+                // onChange=""
+                variant="static"
+                className="!border-black !text-xl text-blue-500"
+                
+              />
+            </div>
+
+            <div className="grid gap-2">
+            <h1 className="font-bold text-lg">Reason for change</h1>
+            <Textarea label="Message"  />
+                  
+            
+            </div>
+
+            <div className="grid gap-2">
+            
+            <h1 className="font-bold text-lg mt-2">4-Digits Pin</h1>
+            <Input
+                label=""
+                // value=""
+                // onChange=""
+                variant="static"
+                className="!border-black !text-xl"
+              />
+                  
+            
+            </div>
+
+            <div className="grid gap-2 ">
+            
+            </div>
+          </div>
+          <div className="flex justify-start mt-4">
+            <Button size="sm">Save</Button>
           </div>
         </div>
       </section>
