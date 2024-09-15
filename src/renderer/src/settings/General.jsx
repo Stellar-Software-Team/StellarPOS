@@ -8,7 +8,8 @@ import {
   Checkbox,
   Typography,
   Button,
-  Card
+  Card,
+  IconButton
 } from '@material-tailwind/react'
 function General() {
   return (
@@ -211,11 +212,10 @@ function General() {
              </div>
             </div>
 
-            <div className="grid gap-2">
-            <div className='flex flex-col gap-2 items-center '>
-              {/* <h1 className="font-bold text-lg">Reset Password</h1> */}
+            <div className="grid gap-2 ">
+            <div className='flex flex-col gap-2  '>
+              <h1 className="font-bold text-lg">Enable 2-Factor Authentication</h1>
               <Checkbox
-                defaultChecked
                 label={
                   <div>
                     <Typography color="blue-gray" className="font-medium">
@@ -233,28 +233,85 @@ function General() {
              </div>
             </div>
 
-            <div className="grid gap-2">
+            <div className="grid gap-2 ">
             <h1 className="font-bold text-lg">Security 4-Digits Pin for Admin Actions</h1>
-            <Checkbox
-                defaultChecked
+           <div> <Checkbox
+            className=''
                 label={
                   <div>
                     <Typography color="blue-gray" className="font-medium">
-                      Add 2-Factor Authentication
+                      Ask for 4-Digits Pin for Admin Actions
                     </Typography>
                     <Typography variant="small" color="gray" className="font-normal">
-                      Additional security for your account using your phone number
+                      This option will ask for a 4-Digits Pin for Admin Actions like reset password, create new employee, etc.
                     </Typography>
                   </div>
                 }
                 containerProps={{
-                  className: '-mt-5'
+                  className: '-mt-5 black'
                 }}
-              />    
+              />  </div>  
             
             </div>
 
+            <div className="grid gap-2 items-center">
+            <h1 className="font-bold text-lg">Event history</h1>
+               <section className='flex flex-col gap-2 '>
+               <div className="flex items-center gap-2">
+                <IconButton>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                  </svg>
+                </IconButton>
+                  <span className='text-black text-xl'>Historical events</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                <IconButton>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                </svg>
+                </IconButton>
+                  <span className='text-black text-xl font'>Historical changes</span>
+                </div>
+               </section>
+            </div>
+
+
             <div className="grid gap-2 ">
+            <h1 className="font-bold text-lg">Close session remotely</h1>
+           <div> <Checkbox
+            className=''
+                label={
+                  <div>
+                    <Typography color="blue-gray" className="font-medium">
+                      Remotetly close session
+                    </Typography>
+                    <Typography variant="small" color="gray" className="font-normal">
+                      This option will allows you to close any session remotely from your computer.
+                    </Typography>
+                  </div>
+                }
+                containerProps={{
+                  className: '-mt-5 black'
+                }}
+              />  
+               <div className='flex flex-col gap-2 mt-4'>
+                  <div className='flex gap-2'>
+                    <h1>Session 1 Firefox Windos 10</h1> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                  <div className='flex gap-2'>
+                    <h1>Session 2 Edge Windows 11</h1> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+               
+                  </div>
+               </div>
+              </div>  
             
             </div>
           </div>

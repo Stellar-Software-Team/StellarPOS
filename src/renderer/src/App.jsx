@@ -12,7 +12,7 @@ import General from './settings/General'
 import Reporting from './settings/Reporting'
 import SettingsInventory from './settings/SettingsInventory'
 import PaymentMethod from './settings/PaymentMethod'
-import Account from './settings/Account'
+import Service from './settings/Service'
 import Taxes from './settings/Taxes'
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
                   <Route path="SettingsInventory" element={<SettingsInventory />} />
                   <Route path="Reporting" element={<Reporting />} />
                   <Route path="Taxes" element={<Taxes />} />
-                  <Route path="Account" element={<Account />} />
+                  <Route path="Service" element={<Service />} />
                 </Route>
 
                 {/* <Route path="/dashboard" element={<Dashboard />} /> */}

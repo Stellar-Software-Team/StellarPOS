@@ -76,7 +76,7 @@ function Apparence() {
                 containerProps={{
                   className: '-mt-5'
                 }}
-              />{' '}
+              />
             </div>
             <div className="grid gap-2">
               <h1 className="font-bold text-lg">Notifications</h1>
