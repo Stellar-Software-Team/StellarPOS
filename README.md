@@ -1,34 +1,11 @@
-# stellarpos
+# Stellar Point of Sale Product
 
-An Electron application with React
+Powered by Electron
 
-## Recommended IDE Setup
+ # Progress in linear
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+ https://linear.app/stellar-software/join/e7985976103ba6a1fcbc95df353495ad?s=4
 
-## Project Setup
+ # About it
 
-### Install
-
-```bash
-$ npm install
-```
-
-### Development
-
-```bash
-$ npm run dev
-```
-
-### Build
-
-```bash
-# For windows
-$ npm run build:win
-
-# For macOS
-$ npm run build:mac
-
-# For Linux
-$ npm run build:linux
-```
+ By now im just working on the MVP 
