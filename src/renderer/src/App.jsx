@@ -1,7 +1,5 @@
 import Sitebar from './components/Sitebar'
-import Body from './service/Body'
 import Home from './Home'
-import Dashboard from './home/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Sales from './sales/Sales'
 import Inventory from './inventory/Inventory'

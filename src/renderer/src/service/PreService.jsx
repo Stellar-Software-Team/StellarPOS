@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@material-tailwind/react'
+import CustomModal from './CustomModal'
 
 function PreService() {
 
-
+  const [open, setOpen] = useState(false)
+  // console.log(open)
   const cashRegisters = [
     {
       id: 1,
@@ -38,11 +40,16 @@ function PreService() {
   ]
   return (
     <>
-      <section className="flex flex-col  h-full">
+      <section className="flex flex-col  h-full" >
         <div className="flex basis-[15%] ">
           <div className="flex flex-col basis-[25%] justify-center items-center ">
             <div className="w-96 flex flex-col ">
-              <Button fullWidth className="flex justify-center items-center gap-2">
+              <Button fullWidth className="flex justify-center items-center gap-2" 
+               onClick={() => {
+                setOpen(true)
+                console.log(open)
+              }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -55,6 +62,11 @@ function PreService() {
                 </svg>
                 Create New Cash Register
               </Button>
+              <CustomModal open={open} onClose={() => setOpen(false)}>
+                <div className='bg-white rounded-3xl  w-[90rem] max-w-[100%] h-[50rem] max-h-[90%]  '>
+
+                </div>
+              </CustomModal>
               <div className="flex gap-2 mt-2">
                 <Button fullWidth variant="outlined">
                   Opened
