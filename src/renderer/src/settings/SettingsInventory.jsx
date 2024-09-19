@@ -137,8 +137,6 @@ function SettingsInventory() {
             <Button size="sm">Save</Button>
           </div>
         </div>
-                    
-        
       </section>
     </div>
   )

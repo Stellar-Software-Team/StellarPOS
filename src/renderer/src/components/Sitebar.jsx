@@ -35,11 +35,9 @@ function Sitebar({ bodyData }) {
             </li>
             <li className="rounded-sm">
               <Link
-                to="bodyProducts"
-                state={bodyData}
+                to="/PreService"
                 className="flex items-center p-2 space-x-3 rounded-md hover:bg-[#FAF0E6] hover:text-[#000000] font-semibold origin-center  justify-center"
               >
-                {/* <span>Service</span> */}
                 <svg
                   className="h-10"
                   xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +54,7 @@ function Sitebar({ bodyData }) {
                 </svg>
               </Link>
             </li>
+
             <li className="rounded-sm">
               <Link
                 to="/Inventory"

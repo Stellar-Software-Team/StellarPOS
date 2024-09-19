@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* #1F1C2C */
+/* #928DAB */
+
+
+
+
+
 body {
   @apply font-poppins;
 }
@@ -10,10 +19,6 @@ body {
   width: 12px;
   height: 10px;
 }
-
-/* .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(243 244 246 / var(--tw-bg-opacity));
-} */
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #d8d8d8;

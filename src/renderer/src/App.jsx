@@ -14,6 +14,7 @@ import SettingsInventory from './settings/SettingsInventory'
 import PaymentMethod from './settings/PaymentMethod'
 import Service from './settings/Service'
 import Taxes from './settings/Taxes'
+import PreService from './service/PreService'
 
 function App() {
   const bodyData = {
@@ -31,7 +32,7 @@ function App() {
             <div className="h-[98%]">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/bodyProducts" element={<Body bodyNav={currentNav} />} />
+                <Route path="/PreService" element={<PreService />} />
                 <Route path="/Inventory" element={<Inventory />} />
                 <Route path="/Sales" element={<Sales />} />
                 <Route path="/Employee" element={<Employee />} />
