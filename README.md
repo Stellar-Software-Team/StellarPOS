@@ -2,9 +2,11 @@
 
 Powered by Electron
 
- # Progress in linear
+ # Currently working with:
+ Linear
+ Electron with vitejs
+ Tailwind
 
- https://linear.app/stellar-software/join/e7985976103ba6a1fcbc95df353495ad?s=4
 
  # About it
 
