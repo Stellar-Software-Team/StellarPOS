@@ -2,14 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* #1F1C2C */
 /* #928DAB */
-
-
-
-
 
 body {
   @apply font-poppins;
@@ -34,4 +28,24 @@ body {
   background-color: #d8d8d8;
   border-radius: 6px;
   border: 3px solid #f1f1f1;
+}
+
+
+.custom-select {
+  appearance: none; /* Removes the default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f8f4f3;
+  padding: 6px 40px 6px 16px; /* Make room for custom arrow */
+  font-family: 'spaceGrotesk', sans-serif;
+  color: black;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBjbGFzcz0ic2l6ZS02Ij4KICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im0xOS41IDguMjUtNy41IDcuNS03LjUtNy41IiAvPgo8L3N2Zz4=');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+}
+
+/* Firefox specific fix */
+.custom-select::-ms-expand {
+  display: none;
 }

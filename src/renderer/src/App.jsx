@@ -13,6 +13,7 @@ import PaymentMethod from './settings/PaymentMethod'
 import Service from './settings/Service'
 import Taxes from './settings/Taxes'
 import PreService from './service/PreService'
+import GeneralService from './service/GeneralService'
 
 function App() {
   const bodyData = {
@@ -26,11 +27,12 @@ function App() {
         <BrowserRouter>
           <Sitebar bodyData={bodyData.Service} />
 
-          <div className="flex-1 px-4 pt-4 bg-white rounded-l-[3rem]">
+          <div className="flex-1 px-4 pt-4 bg-[#F5F5F7] rounded-l-[3rem]">
             <div className="h-[98%]">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/PreService" element={<PreService />} />
+                <Route path="/Service" element={<GeneralService />} />
                 <Route path="/Inventory" element={<Inventory />} />
                 <Route path="/Sales" element={<Sales />} />
                 <Route path="/Employee" element={<Employee />} />
