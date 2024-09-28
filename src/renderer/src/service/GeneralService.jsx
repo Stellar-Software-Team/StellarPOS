@@ -122,10 +122,10 @@ function GeneralService() {
                         </div>
                     </div>
 
-                    <div className='flex justify-left  overflow-x-auto gap-4 custom-scrollbar overflow-y-hidden  max-w-[80rem]'>
+                    <div className='flex justify-left  overflow-x-auto gap-6 custom-scrollbar overflow-y-hidden  max-w-[80rem]'>
                        {
                         labels.map((label) => (
-                            <div className='rounded-2xl p-2 px-4 whitespace-nowrap  flex justify-center items-center cursor-pointer border-2 border-white  bg-white hover:border-2 hover:border-[#705C53] hover:text-[#705C53]'>
+                            <div className='rounded-xl p-2 px-4 whitespace-nowrap  flex justify-center items-center cursor-pointer border-2 border-white  bg-white   hover:border-2 hover:border-[#705C53] hover:text-[#705C53]'>
                                 <Typography variant='h6' className='text-lg '>{label}</Typography>
                             </div>
                         ))
@@ -155,14 +155,32 @@ function GeneralService() {
             <div className='flex flex-col basis-[30%] max-w-[30%]  bg-white  p-8 rounded-3xl'>
                     <div className='flex justify-left items-center gap-4'>
                         <img src={cashierTest} alt="" className='w-24 h-24 shadow-xl rounded-2xl object-cover' />
-                        <div className='flex flex-col gap-2'>
-                            <h1 className='text-gray-500'>Current cashier</h1>
+                        <div className='flex  gap-8 w-full '>
+                            <div className='flex flex-col gap-2 basis-[50%]'>
+                                <h1 className='text-gray-500'>Current cashier</h1>
                             {/* <h1 className='text-2xl font-bold text-gray-800'>Marceline</h1> */}
                             <select className='bg-[#f8f4f3] text-black text-lg  font-spaceGrotesk rounded-xl p-2 px-4 appearance-none custom-select'>
                                 <option value="1">Marceline</option>
                                 <option value="2">Cashier 2</option>
                                 <option value="3">Local</option>
                             </select>
+                            </div>
+                            <div className='flex gap-2'>
+                                <Button className='flex flex-row gap-2 justify-center items-center'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5m6 4.125 2.25 2.25m0 0 2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                                    </svg>
+                                    <h1 className='text-md font-mono'>Close
+                                    </h1>
+
+                                </Button>
+                                <Button className='flex flex-row gap-2 justify-center items-center'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                                    </svg>
+                                    <h1 className='text-md font-mono'>Return</h1>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                     <section className='flex flex-col mt-4 gap-6'>
@@ -331,8 +349,9 @@ function ItemPanel(product) {
     })
 
   return (
-    <div className='w-96 h-[26rem] bg-white shadow-xl rounded-3xl flex flex-col p-2'>
-        <section className='flex p-4 gap-2 basis-[40%]'>
+      
+    <div className='w-96 h-[27rem] bg-white shadow-xl rounded-3xl flex flex-col p-2'>
+        <section className='flex p-4 gap-2 basis-[40%] bg-'>
             <img src={product.image} alt="" className='w-48 h-48 rounded-3xl shadow-xl basis-[40%]' />
             <div className='flex flex-col justify-between p-2 basis-[60%]'>
                 <div className='flex flex-col gap-2'>   
@@ -428,15 +447,19 @@ function ItemPanel(product) {
                     </svg>
                 </Button> 
             </div> */}
-            <div className='basis-[20%]'>
-                <Button fullWidth  className='flex flex-row gap-2 justify-center items-center'>
+            <div className='basis-[100%] justify-center items-center flex'>
+                <button className='bg-black text-white rounded-xl w-[78%] h-10'>
+                    Add to Cart
+                </button>
+                {/* <Button fullWidth  className='flex flex-row gap-2 justify-center items-center'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
-                </Button>
+                </Button> */}
                 </div>
             </div>
     </div>
+    
   )
 }
 
