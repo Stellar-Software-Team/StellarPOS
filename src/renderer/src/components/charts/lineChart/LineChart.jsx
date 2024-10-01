@@ -10,38 +10,6 @@ import {
   ResponsiveContainer
 } from 'recharts'
 
-// const data = [
-//   {
-//     name: 'Page A',
-//     uv: 400,
-//     pv: 200,
-//     amt: 2400
-//   },
-//   {
-//     name: 'Page B',
-//     uv: 300,
-//     pv: 198,
-//     amt: 2210
-//   },
-//   {
-//     name: 'Page C',
-//     uv: 2000,
-//     pv: 300,
-//     amt: 2290
-//   },
-//   {
-//     name: 'Page D',
-//     uv: 2000,
-//     pv: 400,
-//     amt: 2290
-//   },
-//   {
-//     name: 'Page E',
-//     uv: 2000,
-//     pv: 470,
-//     amt: 2290
-//   }
-// ]
 
 const Example = ({ data }) => {
   return (

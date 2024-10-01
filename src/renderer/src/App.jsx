@@ -1,6 +1,6 @@
 import Sitebar from './components/Sitebar'
 import Body from './service/Body'
-import Home from './Home'
+import Home from './home/Home'
 import Dashboard from './home/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Sales from './sales/Sales'
@@ -17,16 +17,11 @@ import Taxes from './settings/Taxes'
 import PreService from './service/PreService'
 
 function App() {
-  const bodyData = {
-    Service: ['All', 'Cold Drinks', 'Hot Drinks', 'Sandwich', 'Desserts']
-  }
-  console.log(bodyData)
-  const currentNav = []
   return (
     <>
       <div className="flex h-screen bg-[#1A1A1A]">
         <BrowserRouter>
-          <Sitebar bodyData={bodyData.Service} />
+          <Sitebar />
 
           <div className="flex-1 px-4 pt-4 bg-white rounded-l-[3rem]">
             <div className="h-[98%]">
@@ -46,7 +41,6 @@ function App() {
                   <Route path="Service" element={<Service />} />
                 </Route>
 
-                {/* <Route path="/dashboard" element={<Dashboard />} /> */}
               </Routes>
             </div>
           </div>

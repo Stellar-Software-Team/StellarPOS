@@ -1,9 +1,7 @@
 import logoIcon from '../assets/imgs/Stellar.png'
 import { Link } from 'react-router-dom'
 
-function Sitebar({ bodyData }) {
-  console.log(bodyData)
-  const tabs = []
+function Sitebar() {
 
   return (
     <>
