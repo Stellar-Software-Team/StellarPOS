@@ -6,10 +6,12 @@ import coffee from '../assets/imgs/blackcoffee.jpg'
 import frieren from '../assets/imgs/frieren.jpg'
 import cashierTest from '../assets/imgs/cashierTest.jpg'
 import { Select, Option, Button,Typography, Badge } from '@material-tailwind/react'
+import { useNavigate } from 'react-router-dom'
 
 
 function GeneralService() {
 
+    const navigate = useNavigate();
     const products = [
         {
             id: 1,
@@ -153,10 +155,10 @@ function GeneralService() {
 
             </div>
             <div className='flex flex-col basis-[30%] max-w-[30%]  bg-white  p-8 rounded-3xl'>
-                    <div className='flex justify-left items-center gap-4'>
-                        <img src={cashierTest} alt="" className='w-24 h-24 shadow-xl rounded-2xl object-cover' />
-                        <div className='flex  gap-8 w-full '>
-                            <div className='flex flex-col gap-2 basis-[50%]'>
+                    <div className='flex justify-left items-center gap-4 '>
+                        <img src={cashierTest} alt="" className='w-28 h-24 shadow-xl rounded-2xl object-cover' />
+                        <div className='flex  gap-8 w-full justify-between'>
+                            <div className='flex flex-col gap-2 basis-[50%] justify-end'>
                                 <h1 className='text-gray-500'>Current cashier</h1>
                             {/* <h1 className='text-2xl font-bold text-gray-800'>Marceline</h1> */}
                             <select className='bg-[#f8f4f3] text-black text-lg  font-spaceGrotesk rounded-xl p-2 px-4 appearance-none custom-select'>
@@ -165,8 +167,9 @@ function GeneralService() {
                                 <option value="3">Local</option>
                             </select>
                             </div>
-                            <div className='flex gap-2'>
-                                <Button className='flex flex-row gap-2 justify-center items-center'>
+                            <div className='flex flex-col  gap-2'>
+                                <Button className='flex flex-row gap-2 justify-center items-center'
+                                >
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                                        <path stroke-linecap="round" stroke-linejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5m6 4.125 2.25 2.25m0 0 2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
                                     </svg>
@@ -174,7 +177,10 @@ function GeneralService() {
                                     </h1>
 
                                 </Button>
-                                <Button className='flex flex-row gap-2 justify-center items-center'>
+                                <Button className='flex flex-row gap-2 justify-center items-center'
+                                onClick={()=>{
+                                    navigate('/PreService')
+                                }}>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                                     </svg>
@@ -466,43 +472,39 @@ function ItemPanel(product) {
 function OrderSummaryItem(product) {
   return (
     
-
-<div className='flex items-center gap-8 p-2 '>
-        <img src={product.image} alt="" className='w-10 h-24 rounded-xl basis-[20%] ' />
-       <section className='flex flex-wrap gap-2 basis-[70%] h-full p-2 relative'>
-        {/* <div className='absolute right-2 top-1/2 transform translate-y-2 '>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-        </div> */}
+    <div className='flex items-center gap-4 p-2'>
+        <div>
+            <img src={product.image} alt="" className='bg-black w-16 h-16 rounded-xl basis-[20%] ' /> 
+        </div>
+       <section className='flex flex-wrap gap-2 basis-[85%] h-full p-2 relative '>
 
             <div className='flex  gap-2 w-[100%] h-[30%] '>
-                <h1 className='text-xl font-mono text-black font-bold'>{product.name}</h1>
+                <h1 className='text-lg font-mono text-black font-semibold'>{product.name}</h1>
                 <div className='flex items-center justify-between gap-4'>
                 
                 </div>
             </div>
           
 
-        <div className='flex  items-center justify-between  w-full'>
-            
+        <div className='flex  items-center justify-between  w-full '>
                     <div className='flex items-center justify-self-start justify-between gap-4'>
-                        <div className='flex items-center justify-center p-2 bg-[#f8f4f3] rounded-xl'>
+                        <div className='flex items-center justify-center p-1 px-2 bg-[#f8f4f3] rounded-xl'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
                             </svg>
                             </div>
 
                     <h1 className='text-xl font-mono text-black'>{product.quantity}</h1>
-                    <div className='flex items-center justify-center p-2 bg-[#f8f4f3] rounded-xl'>
+                    <div className='flex items-center justify-center p-1 px-2 bg-[#f8f4f3] rounded-xl'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                         </svg>
                     </div>
                     </div>
 
-                    <h1 className='text-xl font-mono font-bold text-black'>{product.price}</h1>
-            <div></div>
+            <div>
+            <h1 className='text-lg font-mono text-black'>{product.price}</h1>
+            </div>
         </div>
         
        </section>
