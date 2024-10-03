@@ -1,5 +1,4 @@
 import Sitebar from './components/Sitebar'
-import Body from './service/Body'
 import Home from './home/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Sales from './sales/Sales'
@@ -14,7 +13,10 @@ import PaymentMethod from './settings/PaymentMethod'
 import Service from './settings/Service'
 import Taxes from './settings/Taxes'
 import PreService from './service/PreService'
-
+import Overview from './home/Overview'
+import Tax from './home/Tax'
+import Reports from './home/Reports'
+import GeneralService from './service/GeneralService'
 function App() {
   return (
     <>
@@ -26,7 +28,7 @@ function App() {
             <div className="h-[98%]">
               <Routes>
                 <Route path="/" element={<Home />} >
-                  <Route index element={<Overview />} />
+                  <Route index element={<Overview/>} />
                   <Route path="/Taxes" element={<Tax />} />
                   <Route path="/Reports" element={<Reports/>} />
                 </Route>
