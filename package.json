@@ -7,9 +7,10 @@
   "homepage": "https://electron-vite.org",
   "scripts": {
     "format": "npx @biomejs/biome format --write",
-    "lint": "npx @biomejs/biome lint --write",
-    "check": "npx @biomejs/biome check --write",
-    "start": "electron-vite preview",
+	"lint": "npx @biomejs/biome lint --write",
+	"check": "npx @biomejs/biome check --write",
+	"merge-dev": "npm run format && git add --all && git commit -m 'Commited to merge' && git checkout dev && git merge $(git rev-parse --abbrev-ref @{-1}) && git checkout -",
+	"start": "electron-vite preview",
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "postinstall": "electron-builder install-app-deps",
