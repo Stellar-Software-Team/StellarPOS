@@ -51,4 +51,4 @@ const NavItem = ({ number, label }) => (
   </div>
 )
 
-export default HomeNavbar
+export default HomeNavbar;

@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function EmployeeCard() {
-  return <div>EmployeeCard</div>
+	return <div>EmployeeCard</div>;
 }
 
-export default EmployeeCard
+export default EmployeeCard;
