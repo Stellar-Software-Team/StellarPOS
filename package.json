@@ -6,8 +6,9 @@
   "author": "Josue Medina <devbyjosue@gmail.com>",
   "homepage": "https://electron-vite.org",
   "scripts": {
-    "format": "prettier --write .",
-    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "format": "npx @biomejs/biome format --write",
+    "lint": "npx @biomejs/biome lint --write",
+    "check": "npx @biomejs/biome check --write",
     "start": "electron-vite preview",
     "dev": "electron-vite dev",
     "build": "electron-vite build",
