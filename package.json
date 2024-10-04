@@ -6,9 +6,9 @@
   "author": "Josue Medina <devbyjosue@gmail.com>",
   "homepage": "https://electron-vite.org",
   "scripts": {
-    "format": "npx @biomejs/biome format --write",
-	"lint": "npx @biomejs/biome lint --write",
-	"check": "npx @biomejs/biome check --write",
+    "format": "npx @biomejs/biome format --write ./src/renderer/",
+	"lint": "npx @biomejs/biome lint --write ./src/renderer/",
+	"check": "npx @biomejs/biome check --write ./src/renderer/",
 	"merge-dev": "npm run format && git add --all && git commit -m 'Commited to merge' && git checkout dev && git merge $(git rev-parse --abbrev-ref @{-1}) && git checkout -",
 	"start": "electron-vite preview",
     "dev": "electron-vite dev",
