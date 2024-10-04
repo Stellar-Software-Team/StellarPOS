@@ -1,212 +1,210 @@
-import React from 'react';
-import producto from '../assets/imgs/cafeProducto.jpg';
+import React from 'react'
+import producto from '../assets/imgs/cafeProducto.jpg'
 
 const product = {
-	name: 'Espresso',
-	price: '2.6',
-	size: ['Small', 'Medium', 'Big'],
-	additions: ['milk', 'cinnamonroll'],
-	imgUri: producto,
-};
+  name: 'Espresso',
+  price: '2.6',
+  size: ['Small', 'Medium', 'Big'],
+  additions: ['milk', 'cinnamonroll'],
+  imgUri: producto
+}
 
 function Product() {
-	return (
-		<>
-			<div className="max-w-xs rounded-3xl shadow-md bg-white">
-				<div className="flex justify-center pt-6">
-					<img
-						src={producto}
-						alt=""
-						className="object-cover object-center rounded-3xl max-h-48 max-w-96 w-72 dark:bg-gray-500"
-					/>
-				</div>
-				<div className="flex flex-col justify-between p-6">
-					<div className="grid grid-cols-2 gap-x-32 gap-y-2">
-						<h2 className="text-xl font-semibold tracking-wide">
-							{product['name']}
-						</h2>
-						<p className="text-xl font-semibold">
-							{' '}
-							<span>$</span> {product['price']}
-						</p>
+  return (
+    <>
+      <div className="max-w-xs rounded-3xl shadow-md bg-white">
+        <div className="flex justify-center pt-6">
+          <img
+            src={producto}
+            alt=""
+            className="object-cover object-center rounded-3xl max-h-48 max-w-96 w-72 dark:bg-gray-500"
+          />
+        </div>
+        <div className="flex flex-col justify-between p-6">
+          <div className="grid grid-cols-2 gap-x-32 gap-y-2">
+            <h2 className="text-xl font-semibold tracking-wide">{product['name']}</h2>
+            <p className="text-xl font-semibold">
+              {' '}
+              <span>$</span> {product['price']}
+            </p>
 
-						<span className="text-md">Add milk</span>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="size-6"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-							/>
-						</svg>
-					</div>
+            <span className="text-md">Add milk</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+          </div>
 
-					<div className="grid grid-cols-4 mt-6">
-						<div className="flex flex-col items-center">
-							<div className="bg-gray-200 p-2 rounded-full w-14 hover:bg-[#E4C59E] ">
-								<svg
-									className="ml-[2px]"
-									fill="#000000"
-									height="36px"
-									width="36px"
-									version="1.1"
-									id="Layer_1"
-									xmlns="http://www.w3.org/2000/svg"
-									xmlns:xlink="http://www.w3.org/1999/xlink"
-									viewBox="0 0 447 447"
-									xml:space="preserve"
-								>
-									<g transform="translate(0 -540.36)">
-										<g>
-											<g>
-												<polygon points="222.9,756.36 222.9,756.36 222.9,756.36 			" />
-												<path
-													d="M222.9,756.36c-20,0-35.1,19.3-35.1,45c0,25.6,15.1,45,35.1,45c20.4,0,36.3-19.7,36.3-45S243.3,756.36,222.9,756.36z
+          <div className="grid grid-cols-4 mt-6">
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-200 p-2 rounded-full w-14 hover:bg-[#E4C59E] ">
+                <svg
+                  className="ml-[2px]"
+                  fill="#000000"
+                  height="36px"
+                  width="36px"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 447 447"
+                  xml:space="preserve"
+                >
+                  <g transform="translate(0 -540.36)">
+                    <g>
+                      <g>
+                        <polygon points="222.9,756.36 222.9,756.36 222.9,756.36 			" />
+                        <path
+                          d="M222.9,756.36c-20,0-35.1,19.3-35.1,45c0,25.6,15.1,45,35.1,45c20.4,0,36.3-19.7,36.3-45S243.3,756.36,222.9,756.36z
                             M213.7,828.06c-6.5-4.9-10.9-14.9-10.9-26.7c0-8,2-15.1,5.3-20.4v0c4.7,7.2,10.8,17.5,12.2,24
                             C220.7,810.16,217.2,820.26,213.7,828.06z M229.2,829.96c3.2-7.9,6.8-18.9,6-26.9l-0.1-0.6c-1.9-9.8-10-23-15.1-30.7
                             c1-0.2,2-0.3,3-0.3c11.7,0,21.3,13.4,21.3,30C244.2,814.76,237.9,826.16,229.2,829.96z"
-												/>
-												<path
-													d="M375,622.76v-33.7c0-4.1-3.4-7.5-7.5-7.5h-8.1v-33.7c0-4.1-3.4-7.5-7.5-7.5H95.1c-4.1,0-7.5,3.4-7.5,7.5v33.7h-8.1
+                        />
+                        <path
+                          d="M375,622.76v-33.7c0-4.1-3.4-7.5-7.5-7.5h-8.1v-33.7c0-4.1-3.4-7.5-7.5-7.5H95.1c-4.1,0-7.5,3.4-7.5,7.5v33.7h-8.1
                             c-4.1,0-7.5,3.4-7.5,7.5v33.7H55.5v15h24h8.6l23.5,310.2c0.3,3.9,3.6,6.9,7.5,6.9h9.3v25c0,4.1,3.4,7.5,7.5,7.5h175.2
                             c4.1,0,7.5-3.4,7.5-7.5v-25h9.3c3.9,0,7.2-3,7.5-6.9l23.5-310.2h8.6h24v-15H375z M102.6,555.36h241.8v26.2H102.6V555.36z
                             M303.6,972.36H143.4v-17.5h160.2V972.36z M326,872.46L326,872.46H143.1v15h181.8l-4,52.4H126l-16.5-218.4h210v-15H108.4
                             l-5.2-68.7h240.6L326,872.46z M360,622.76H87v-26.2h8.1h256.8h8.1V622.76z"
-												/>
-											</g>
-										</g>
-									</g>
-								</svg>
-							</div>
-							<small className="p-2 font-semibold tracking-wide">Small</small>
-						</div>
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <small className="p-2 font-semibold tracking-wide">Small</small>
+            </div>
 
-						<div className="flex flex-col items-center">
-							<div className="bg-gray-200 p-2 rounded-full w-14 hover:bg-[#E4C59E] ">
-								<svg
-									className="ml-[2px]"
-									fill="#000000"
-									height="36px"
-									width="36px"
-									version="1.1"
-									id="Layer_1"
-									xmlns="http://www.w3.org/2000/svg"
-									xmlns:xlink="http://www.w3.org/1999/xlink"
-									viewBox="0 0 447 447"
-									xml:space="preserve"
-								>
-									<g transform="translate(0 -540.36)">
-										<g>
-											<g>
-												<polygon points="222.9,756.36 222.9,756.36 222.9,756.36 			" />
-												<path
-													d="M222.9,756.36c-20,0-35.1,19.3-35.1,45c0,25.6,15.1,45,35.1,45c20.4,0,36.3-19.7,36.3-45S243.3,756.36,222.9,756.36z
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-200 p-2 rounded-full w-14 hover:bg-[#E4C59E] ">
+                <svg
+                  className="ml-[2px]"
+                  fill="#000000"
+                  height="36px"
+                  width="36px"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 447 447"
+                  xml:space="preserve"
+                >
+                  <g transform="translate(0 -540.36)">
+                    <g>
+                      <g>
+                        <polygon points="222.9,756.36 222.9,756.36 222.9,756.36 			" />
+                        <path
+                          d="M222.9,756.36c-20,0-35.1,19.3-35.1,45c0,25.6,15.1,45,35.1,45c20.4,0,36.3-19.7,36.3-45S243.3,756.36,222.9,756.36z
                             M213.7,828.06c-6.5-4.9-10.9-14.9-10.9-26.7c0-8,2-15.1,5.3-20.4v0c4.7,7.2,10.8,17.5,12.2,24
                             C220.7,810.16,217.2,820.26,213.7,828.06z M229.2,829.96c3.2-7.9,6.8-18.9,6-26.9l-0.1-0.6c-1.9-9.8-10-23-15.1-30.7
                             c1-0.2,2-0.3,3-0.3c11.7,0,21.3,13.4,21.3,30C244.2,814.76,237.9,826.16,229.2,829.96z"
-												/>
-												<path
-													d="M375,622.76v-33.7c0-4.1-3.4-7.5-7.5-7.5h-8.1v-33.7c0-4.1-3.4-7.5-7.5-7.5H95.1c-4.1,0-7.5,3.4-7.5,7.5v33.7h-8.1
+                        />
+                        <path
+                          d="M375,622.76v-33.7c0-4.1-3.4-7.5-7.5-7.5h-8.1v-33.7c0-4.1-3.4-7.5-7.5-7.5H95.1c-4.1,0-7.5,3.4-7.5,7.5v33.7h-8.1
                             c-4.1,0-7.5,3.4-7.5,7.5v33.7H55.5v15h24h8.6l23.5,310.2c0.3,3.9,3.6,6.9,7.5,6.9h9.3v25c0,4.1,3.4,7.5,7.5,7.5h175.2
                             c4.1,0,7.5-3.4,7.5-7.5v-25h9.3c3.9,0,7.2-3,7.5-6.9l23.5-310.2h8.6h24v-15H375z M102.6,555.36h241.8v26.2H102.6V555.36z
                             M303.6,972.36H143.4v-17.5h160.2V972.36z M326,872.46L326,872.46H143.1v15h181.8l-4,52.4H126l-16.5-218.4h210v-15H108.4
                             l-5.2-68.7h240.6L326,872.46z M360,622.76H87v-26.2h8.1h256.8h8.1V622.76z"
-												/>
-											</g>
-										</g>
-									</g>
-								</svg>
-							</div>
-							<small className="p-2 font-semibold tracking-wide">Medium</small>
-						</div>
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <small className="p-2 font-semibold tracking-wide">Medium</small>
+            </div>
 
-						<div className="flex flex-col items-center">
-							<div className="bg-gray-200 p-2 rounded-full w-14 hover:bg-[#E4C59E] ">
-								<svg
-									className="ml-[2px]"
-									fill="#000000"
-									height="36px"
-									width="36px"
-									version="1.1"
-									id="Layer_1"
-									xmlns="http://www.w3.org/2000/svg"
-									xmlns:xlink="http://www.w3.org/1999/xlink"
-									viewBox="0 0 447 447"
-									xml:space="preserve"
-								>
-									<g transform="translate(0 -540.36)">
-										<g>
-											<g>
-												<polygon points="222.9,756.36 222.9,756.36 222.9,756.36 			" />
-												<path
-													d="M222.9,756.36c-20,0-35.1,19.3-35.1,45c0,25.6,15.1,45,35.1,45c20.4,0,36.3-19.7,36.3-45S243.3,756.36,222.9,756.36z
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-200 p-2 rounded-full w-14 hover:bg-[#E4C59E] ">
+                <svg
+                  className="ml-[2px]"
+                  fill="#000000"
+                  height="36px"
+                  width="36px"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 447 447"
+                  xml:space="preserve"
+                >
+                  <g transform="translate(0 -540.36)">
+                    <g>
+                      <g>
+                        <polygon points="222.9,756.36 222.9,756.36 222.9,756.36 			" />
+                        <path
+                          d="M222.9,756.36c-20,0-35.1,19.3-35.1,45c0,25.6,15.1,45,35.1,45c20.4,0,36.3-19.7,36.3-45S243.3,756.36,222.9,756.36z
                             M213.7,828.06c-6.5-4.9-10.9-14.9-10.9-26.7c0-8,2-15.1,5.3-20.4v0c4.7,7.2,10.8,17.5,12.2,24
                             C220.7,810.16,217.2,820.26,213.7,828.06z M229.2,829.96c3.2-7.9,6.8-18.9,6-26.9l-0.1-0.6c-1.9-9.8-10-23-15.1-30.7
                             c1-0.2,2-0.3,3-0.3c11.7,0,21.3,13.4,21.3,30C244.2,814.76,237.9,826.16,229.2,829.96z"
-												/>
-												<path
-													d="M375,622.76v-33.7c0-4.1-3.4-7.5-7.5-7.5h-8.1v-33.7c0-4.1-3.4-7.5-7.5-7.5H95.1c-4.1,0-7.5,3.4-7.5,7.5v33.7h-8.1
+                        />
+                        <path
+                          d="M375,622.76v-33.7c0-4.1-3.4-7.5-7.5-7.5h-8.1v-33.7c0-4.1-3.4-7.5-7.5-7.5H95.1c-4.1,0-7.5,3.4-7.5,7.5v33.7h-8.1
                             c-4.1,0-7.5,3.4-7.5,7.5v33.7H55.5v15h24h8.6l23.5,310.2c0.3,3.9,3.6,6.9,7.5,6.9h9.3v25c0,4.1,3.4,7.5,7.5,7.5h175.2
                             c4.1,0,7.5-3.4,7.5-7.5v-25h9.3c3.9,0,7.2-3,7.5-6.9l23.5-310.2h8.6h24v-15H375z M102.6,555.36h241.8v26.2H102.6V555.36z
                             M303.6,972.36H143.4v-17.5h160.2V972.36z M326,872.46L326,872.46H143.1v15h181.8l-4,52.4H126l-16.5-218.4h210v-15H108.4
                             l-5.2-68.7h240.6L326,872.46z M360,622.76H87v-26.2h8.1h256.8h8.1V622.76z"
-												/>
-											</g>
-										</g>
-									</g>
-								</svg>
-							</div>
-							<small className="p-2 font-semibold tracking-wide">Big</small>
-						</div>
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <small className="p-2 font-semibold tracking-wide">Big</small>
+            </div>
 
-						<div className="flex flex-col items-center">
-							<div className="bg-gray-200 p-2 rounded-full w-14 hover:bg-[#E4C59E] ">
-								<svg
-									className="ml-[2px]"
-									fill="#000000"
-									height="36px"
-									width="36px"
-									version="1.1"
-									id="Layer_1"
-									xmlns="http://www.w3.org/2000/svg"
-									xmlns:xlink="http://www.w3.org/1999/xlink"
-									viewBox="0 0 447 447"
-									xml:space="preserve"
-								>
-									<g transform="translate(0 -540.36)">
-										<g>
-											<g>
-												<polygon points="222.9,756.36 222.9,756.36 222.9,756.36 			" />
-												<path
-													d="M222.9,756.36c-20,0-35.1,19.3-35.1,45c0,25.6,15.1,45,35.1,45c20.4,0,36.3-19.7,36.3-45S243.3,756.36,222.9,756.36z
+            <div className="flex flex-col items-center">
+              <div className="bg-gray-200 p-2 rounded-full w-14 hover:bg-[#E4C59E] ">
+                <svg
+                  className="ml-[2px]"
+                  fill="#000000"
+                  height="36px"
+                  width="36px"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 447 447"
+                  xml:space="preserve"
+                >
+                  <g transform="translate(0 -540.36)">
+                    <g>
+                      <g>
+                        <polygon points="222.9,756.36 222.9,756.36 222.9,756.36 			" />
+                        <path
+                          d="M222.9,756.36c-20,0-35.1,19.3-35.1,45c0,25.6,15.1,45,35.1,45c20.4,0,36.3-19.7,36.3-45S243.3,756.36,222.9,756.36z
                             M213.7,828.06c-6.5-4.9-10.9-14.9-10.9-26.7c0-8,2-15.1,5.3-20.4v0c4.7,7.2,10.8,17.5,12.2,24
                             C220.7,810.16,217.2,820.26,213.7,828.06z M229.2,829.96c3.2-7.9,6.8-18.9,6-26.9l-0.1-0.6c-1.9-9.8-10-23-15.1-30.7
                             c1-0.2,2-0.3,3-0.3c11.7,0,21.3,13.4,21.3,30C244.2,814.76,237.9,826.16,229.2,829.96z"
-												/>
-												<path
-													d="M375,622.76v-33.7c0-4.1-3.4-7.5-7.5-7.5h-8.1v-33.7c0-4.1-3.4-7.5-7.5-7.5H95.1c-4.1,0-7.5,3.4-7.5,7.5v33.7h-8.1
+                        />
+                        <path
+                          d="M375,622.76v-33.7c0-4.1-3.4-7.5-7.5-7.5h-8.1v-33.7c0-4.1-3.4-7.5-7.5-7.5H95.1c-4.1,0-7.5,3.4-7.5,7.5v33.7h-8.1
                             c-4.1,0-7.5,3.4-7.5,7.5v33.7H55.5v15h24h8.6l23.5,310.2c0.3,3.9,3.6,6.9,7.5,6.9h9.3v25c0,4.1,3.4,7.5,7.5,7.5h175.2
                             c4.1,0,7.5-3.4,7.5-7.5v-25h9.3c3.9,0,7.2-3,7.5-6.9l23.5-310.2h8.6h24v-15H375z M102.6,555.36h241.8v26.2H102.6V555.36z
                             M303.6,972.36H143.4v-17.5h160.2V972.36z M326,872.46L326,872.46H143.1v15h181.8l-4,52.4H126l-16.5-218.4h210v-15H108.4
                             l-5.2-68.7h240.6L326,872.46z M360,622.76H87v-26.2h8.1h256.8h8.1V622.76z"
-												/>
-											</g>
-										</g>
-									</g>
-								</svg>
-							</div>
-							<small className="p-2 font-semibold tracking-wide">Huge</small>
-						</div>
-					</div>
-				</div>
-			</div>
-			{/* <div className='bg-black rounded-lg flex justify-center'>
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <small className="p-2 font-semibold tracking-wide">Huge</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div className='bg-black rounded-lg flex justify-center'>
         <div className='bg-white justify-center items-center grid grid-rows-5 gap-2 rounded-[3rem] w-[90%] pt-2'>
             <div className='row-span-2 w-[12rem] bg-black'>
                 <img src={producto} alt=""  className='rounded-[3rem] w-full h-44'/>
@@ -232,8 +230,8 @@ function Product() {
             </div>
         </div>
       </div> */}
-		</>
-	);
+    </>
+  )
 }
 
-export default Product;
+export default Product
