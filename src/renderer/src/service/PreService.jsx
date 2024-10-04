@@ -164,7 +164,7 @@ function PreService() {
   )
 }
 
-export default PreService;
+export default PreService
 
 function PreServiceCashRegister({ cashRegister }) {
   return (

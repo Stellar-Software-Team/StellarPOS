@@ -1,5 +1,5 @@
 import Sitebar from './components/Sitebar'
-import Home from './Home'
+import Home from './home/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Sales from './sales/Sales'
 import Inventory from './inventory/Inventory'
@@ -12,7 +12,11 @@ import SettingsInventory from './settings/SettingsInventory'
 import PaymentMethod from './settings/PaymentMethod'
 import Service from './settings/Service'
 import Taxes from './settings/Taxes'
-
+import PreService from './service/PreService'
+import Overview from './home/Overview'
+import Tax from './home/Tax'
+import Reports from './home/Reports'
+import GeneralService from './service/GeneralService'
 function App() {
   return (
     <>
@@ -52,4 +56,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
