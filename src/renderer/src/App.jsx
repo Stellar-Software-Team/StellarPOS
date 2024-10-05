@@ -16,9 +16,9 @@ import PreService from './service/PreService'
 import Reports from './home/Reports'
 import Tax from './home/Tax'
 import Overview from './home/Overview'
-import Tax from './home/Tax'
-import Reports from './home/Reports'
 import GeneralService from './service/GeneralService'
+
+
 function App() {
   return (
     <>
