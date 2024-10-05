@@ -1,7 +1,6 @@
 import Sitebar from './components/Sitebar'
 import Body from './service/Body'
-import Home from './Home'
-import Dashboard from './home/Dashboard'
+import Home from './home/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Sales from './sales/Sales'
 import Inventory from './inventory/Inventory'
@@ -15,23 +14,25 @@ import PaymentMethod from './settings/PaymentMethod'
 import Service from './settings/Service'
 import Taxes from './settings/Taxes'
 import PreService from './service/PreService'
+import Reports from './home/Reports'
+import Tax from './home/Tax'
+import Overview from './home/Overview'
 
 function App() {
-  const bodyData = {
-    Service: ['All', 'Cold Drinks', 'Hot Drinks', 'Sandwich', 'Desserts']
-  }
-  console.log(bodyData)
-  const currentNav = []
   return (
     <>
       <div className="flex h-screen bg-[#1A1A1A]">
         <BrowserRouter>
-          <Sitebar bodyData={bodyData.Service} />
+          <Sitebar />
 
           <div className="flex-1 px-4 pt-4 bg-white rounded-l-[3rem]">
             <div className="h-[98%]">
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home />} >
+                  <Route index element={<Overview />} />
+                  <Route path="/Taxes" element={<Tax />} />
+                  <Route path="/Reports" element={<Reports/>} />
+                </Route>
                 <Route path="/PreService" element={<PreService />} />
                 <Route path="/Inventory" element={<Inventory />} />
                 <Route path="/Sales" element={<Sales />} />
@@ -46,7 +47,6 @@ function App() {
                   <Route path="Service" element={<Service />} />
                 </Route>
 
-                {/* <Route path="/dashboard" element={<Dashboard />} /> */}
               </Routes>
             </div>
           </div>
