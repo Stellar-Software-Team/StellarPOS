@@ -1,5 +1,4 @@
 import Sitebar from './components/Sitebar'
-import Body from './service/Body'
 import Home from './home/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Sales from './sales/Sales'
@@ -17,7 +16,7 @@ import PreService from './service/PreService'
 import Reports from './home/Reports'
 import Tax from './home/Tax'
 import Overview from './home/Overview'
-
+import GeneralService from './service/GeneralService'
 function App() {
   return (
     <>
