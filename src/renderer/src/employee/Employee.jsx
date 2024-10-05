@@ -19,7 +19,7 @@ function Employee() {
   ]
   return (
     <>
-      <section className="w-full h-full bg-white shadow-md rounded-3xl flex flex-col font-mono">
+      <section className="w-full h-full shadow-md rounded-3xl flex flex-col font-mono">
         <nav className="flex flex-row m-6 justify-between">
           <div className="flex justify-center items-center gap-2 cursor-default">
             <svg
@@ -199,7 +199,7 @@ function Employee() {
 
 function EmployeeCard({ props }) {
   return (
-    <div className="h-[21rem] w-[18rem] bg-gray-100 rounded-3xl flex flex-col p-2">
+    <div className="h-[21rem] w-[18rem] bg-white rounded-3xl flex flex-col p-2">
       <div className="flex justify-between basis-1/2 w-full m-2">
         <div>
           <div className=" rounded-full mt-6 h-20 w-20 ">

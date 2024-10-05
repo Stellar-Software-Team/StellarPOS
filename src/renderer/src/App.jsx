@@ -25,7 +25,7 @@ function App() {
         <BrowserRouter>
           <Sitebar />
 
-          <div className="flex-1 px-4 pt-4 bg-white rounded-l-[3rem]">
+          <div className="flex-1 px-4 pt-4 bg-[#F5F5F7] rounded-l-[3rem]">
             <div className="h-[98%]">
               <Routes>
                 <Route path="/" element={<Home />} >
@@ -34,6 +34,7 @@ function App() {
                   <Route path="/Reports" element={<Reports/>} />
                 </Route>
                 <Route path="/PreService" element={<PreService />} />
+                <Route path="/Service" element={<GeneralService />} />
                 <Route path="/Inventory" element={<Inventory />} />
                 <Route path="/Sales" element={<Sales />} />
                 <Route path="/Employee" element={<Employee />} />
