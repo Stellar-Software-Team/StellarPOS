@@ -17,7 +17,11 @@ function Overview() {
         series: [
           {
             name: "Sales",
-            data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+            data: [
+              50, 40, 300, 320, 500, 350, 200, 230, 500,
+              450, 400, 380, 420, 390, 460, 480, 520, 490,
+              430, 410, 370, 340, 280, 150
+            ]
           },
         ],
         options: {
@@ -55,16 +59,11 @@ function Overview() {
               },
             },
             categories: [
-              "Apr",
-              "May",
-              "Jun",
-              "Jul",
-              "Aug",
-              "Sep",
-              "Oct",
-              "Nov",
-              "Dec",
-            ],
+              "12 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM",
+              "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM",
+              "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM",
+              "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM"
+            ]
           },
           yaxis: {
             labels: {
@@ -194,26 +193,23 @@ function Overview() {
         {
           img: "https://images.pexels.com/photos/1187317/pexels-photo-1187317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
           name: "Black Coffee",
-          sku: "890",
           amount: "$35.00",
           quantity: 76
         },
         {
           img: "https://images.pexels.com/photos/920220/pexels-photo-920220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
           name: "Bread",
-          sku: "1231190",
           amount: "$12.00",
           quantity: 6
         },
         {
           img: "https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
           name: "Sandwich",
-          sku: "1237890",
           amount: "$65.00",
           quantity: 197
         }
       ];
-      const TABLE_HEAD = ["Product","SKU" ,"Price", "Quantity"];
+      const TABLE_HEAD = ["Product","Price", "Quantity"];
     
   return (
     <>
@@ -350,7 +346,7 @@ function Overview() {
                         <tr>
                           {TABLE_HEAD.map((head) => (
                             <th key={head} className="  p-4 rounded-lg">
-                              <Typography variant="small" color="blue-gray" className="font-bold leading-none opacity-70">
+                              <Typography variant="small" color="blue-gray" className="font-bold leading-none opacity-100 text-md">
                                 {head}
                               </Typography>
                             </th>
@@ -358,7 +354,7 @@ function Overview() {
                         </tr>
                       </thead>
                       <tbody className=''>
-                        {TABLE_ROWS.map(({ img, name, sku,amount, quantity }, index) => {
+                        {TABLE_ROWS.map(({ img, name,amount, quantity }, index) => {
                           const isLast = index === TABLE_ROWS.length - 1;
                           const classes = isLast ? "p-2" : "p-2 ";
 
@@ -377,18 +373,18 @@ function Overview() {
                                   </Typography>
                                 </div>
                               </td>
-                              <td className={classes}>
+                              {/* <td className={classes}>
                                 <Typography variant="small" color="blue-gray" className="font-normal">
                                   {sku}
                                 </Typography>
-                              </td>
+                              </td> */}
                               <td className={classes}>
-                                <Typography variant="small" color="blue-gray" className="font-normal">
+                                <Typography variant="" color="blue-gray" className="font-normal">
                                   {amount}
                                 </Typography>
                               </td>
                               <td className={classes}>
-                                <Typography variant="small" color="blue-gray" className="font-normal">
+                                <Typography variant="" color="blue-gray" className="font-normal">
                                   {quantity}
                                 </Typography>
                               </td>
